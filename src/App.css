@@ -1,38 +1,88 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: #292929;
+}
+
 .App {
-  text-align: center;
+  width: 100%;
+  height: 100vh;
+  overflow-y: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*background: #e3fff6;*/
+  background: #ebf5fc;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.form {
+  border-radius: 20px;
+  padding: 30px;
+  min-width: 500px;
   display: flex;
   flex-direction: column;
+  box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.1),
+              -7px -7px 20px rgba(241, 255, 255, 1);
+
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+
+.form h1 {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  width: 350px;
+}
+
+.input-wrapper label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  width: 100%;
+}
+
+.input-wrapper input {
+  background-color: transparent;
+  border: unset;
+  border-radius: 10px;
+  padding: 10px;
+  outline: none;
+  box-shadow: inset 3px 3px 5px rgba(0, 0, 0, 0.1),
+  inset -3px -3px 5px rgba(241, 255, 255, 0.5);
+}
+
+button {
+  margin-top: 20px;
+  width: 130px;
+  background-color: transparent;
+  outline: none;
+  color: #292929;
+  font-weight: bold;
+  border-radius: 10px;
+  padding: 10px;
+  transition: ease all 250ms;
+  box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.1),
+  -7px -7px 20px rgb(241, 255, 255);
+  border: unset;
+}
+
+button:hover {
+  cursor: pointer;
+  color: #292929;
+  box-shadow: inset 3px 3px 5px rgba(0, 0, 0, 0.1),
+  inset -3px -3px 5px rgba(241, 255, 255, 0.5);
+}
+
+.error {
+  margin-top: 10px;
+  font-weight: bold;
+  font-style: italic;
+  color: #b60000;
 }
